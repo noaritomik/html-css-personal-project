@@ -1,8 +1,8 @@
 
 
 body {
-  margin: 20;
-  padding: 30;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
@@ -54,8 +54,6 @@ body {
   font-weight: bold;
 }
 
-
-
 #header-cotainer{
 width: 90%;
 padding: 15px;
@@ -75,5 +73,136 @@ text-decoration: none;
     text-align: center;
     padding: 70px 0px;
     background: linear-gradient(100deg, var(--bg-2), var(--bg-2));
+} 
+
+.footer {
+  background: #020617;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
 
+.footer p {
+  margin: 0;
+}
+
+.products {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #020617;
+  border-radius: 14px;
+  padding: 20px;
+  transition: 0.3s ease;
+  border: 1px solid #1e293b;
+}
+
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+
+.card p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+
+/* ABOUT PAGE */
+.about {
+  padding: 70px 40px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  color: #cbd5f5;
+  margin-bottom: 15px;
+}
+
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.contact-container {
+  max-width: 900px;
+  background: #111827;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.contact-container h1 {
+  color: #38bdf8;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0ea5e9;
+}
+
+#products-grid img{
+  width: 350px;
+  height: 350px;
+}
+.product-card{
+  border: 3px solid var(--border);
+  background: #020617;
+  padding: 30px;
+  border-radius: 50px;
+  text-align: center;
+}
