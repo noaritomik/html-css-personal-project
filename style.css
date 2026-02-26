@@ -13,6 +13,13 @@ body {
   color: #e5e7eb;
 }
 
+/* Make page a column so footer stays at bottom and main content can center */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -28,30 +35,111 @@ body {
 .navbar a {
   color: #e5e7eb;
   text-decoration: none;
-  margin-right: 200px;
+  margin-right: 20px;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: #38bdf8;
 }
 
-.home {
-  min-height: 80vh;
+/* global container used on multiple pages */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.stats {
+  text-align: center;
+  padding: 30px 20px;
+  background: #111827;
+  border-radius: 12px;
+  margin: 15px;
+  flex: 0 1 280px;
+}
+
+.stats_value {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #38bdf8;
+}
+
+.stats_label {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.stats .about_our.elektroniks {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+/* hero section on home page */
+.hero {
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 80px 20px;
+  background: #0f172a;
 }
 
-.home {
-  margin-top: 20px;
-  padding: 12px 24px;
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0 0 1rem 0;
+  color: #e5e7eb;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #cbd5f5;
+  margin: 0 0 2rem 0;
+  max-width: 600px;
+}
+
+.hero img {
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* call-to-action button used in hero */
+.cta {
+  margin-top: 30px;
+  padding: 14px 32px;
   background: #38bdf8;
   color: #020617;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
 }
 
 #header-cotainer{
@@ -68,12 +156,6 @@ font-weight: bold;
 color:var(--text);
 text-decoration: none;
 }
-
-.home{
-    text-align: center;
-    padding: 70px 0px;
-    background: linear-gradient(100deg, var(--bg-2), var(--bg-2));
-} 
 
 .footer {
   background: #020617;
@@ -132,6 +214,26 @@ text-decoration: none;
 .about p {
   color: #cbd5f5;
   margin-bottom: 15px;
+}
+
+/* Center the about section between header and footer */
+.container.about {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.about-content {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Ensure footer element doesn't shrink and stays at bottom */
+footer {
+  flex-shrink: 0;
 }
 
 .contact-section {
@@ -205,4 +307,36 @@ text-decoration: none;
   padding: 30px;
   border-radius: 50px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* mobile adjustments */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .navbar nav {
+    margin-top: 10px;
+  }
+  .navbar a {
+    display: block;
+    margin: 5px 0;
+  }
+  .hero {
+    padding: 40px 10px;
+  }
 }
